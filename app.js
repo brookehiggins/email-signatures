@@ -44,4 +44,3 @@ updateImageValue =  async (e) => {
 
 const imageInput = document.getElementById('imageInput')
 imageInput.addEventListener('change', updateImageValue)
-
