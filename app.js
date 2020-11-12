@@ -5,7 +5,7 @@ updateNameValue = (e) => {
 };
 
 const nameInput = document.getElementById('nameInput')
-nameInput.addEventListener('keydown', updateNameValue)
+nameInput.addEventListener('keyup', updateNameValue)
 
 
 updateTitleValue = (e) => {
@@ -13,7 +13,7 @@ updateTitleValue = (e) => {
 };
 
 const titleInput = document.getElementById('titleInput')
-titleInput.addEventListener('keydown', updateTitleValue)
+titleInput.addEventListener('keyup', updateTitleValue)
 
 
 updatePhoneNumberValue = (e) => {
@@ -21,14 +21,14 @@ updatePhoneNumberValue = (e) => {
 };
 
 const phoneNumberInput = document.getElementById('phoneNumberInput')
-phoneNumberInput.addEventListener('keydown', updatePhoneNumberValue)
+phoneNumberInput.addEventListener('keyup', updatePhoneNumberValue)
 
 updateEmailValue = (e) => {
     document.getElementById('email').innerHTML = e.target.value
 };
 
 const emailInput = document.getElementById('emailInput')
-emailInput.addEventListener('keydown', updateEmailValue)
+emailInput.addEventListener('keyup', updateEmailValue)
 
 const toBase64 = file => new Promise((resolve, reject) => {
     const reader = new FileReader();
