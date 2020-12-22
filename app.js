@@ -30,17 +30,16 @@ updateEmailValue = (e) => {
 const emailInput = document.getElementById('emailInput')
 emailInput.addEventListener('keyup', updateEmailValue)
 
-const toBase64 = file => new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = error => reject(error);
-});
+// const toBase64 = file => new Promise((resolve, reject) => {
+//     const reader = new FileReader();
+//     reader.readAsDataURL(file);
+//     reader.onload = () => resolve(reader.result);
+//     reader.onerror = error => reject(error);
+// });
 
-updateImageValue =  async (e) => {
-    const base64String = await toBase64(e.target.files[0])
-    document.getElementById('yourImage').src = base64String
+updateImageValue = (e) => {
+    document.getElementById('yourImage').src = e.target.value
 };
 
 const imageInput = document.getElementById('imageInput')
-imageInput.addEventListener('change', updateImageValue)
+imageInput.addEventListener('keyup', updateImageValue)
