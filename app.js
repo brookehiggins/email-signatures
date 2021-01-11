@@ -15,6 +15,13 @@ updateTitleValue = (e) => {
 const titleInput = document.getElementById('titleInput')
 titleInput.addEventListener('keyup', updateTitleValue)
 
+updateCompanyValue = (e) => {
+    document.getElementById('company').innerHTML = e.target.value
+};
+
+const companyInput = document.getElementById('companyInput')
+companyInput.addEventListener('keyup', updateCompanyValue)
+
 
 updatePhoneNumberValue = (e) => {
     document.getElementById('phoneNumber').innerHTML = e.target.value
@@ -43,3 +50,17 @@ updateImageValue = (e) => {
 
 const imageInput = document.getElementById('imageInput')
 imageInput.addEventListener('keyup', updateImageValue)
+
+
+updateButton = (e) => {
+    const value = document.getElementById('colorPicker').src = e.target.value;
+    const btn = document.getElementById('btn');
+    const line = document.getElementById('line');
+    btn.style['background-color'] = value;
+    line.style['color'] = value;
+};
+
+const picker = document.getElementById('colorPicker')
+picker.addEventListener('change', updateButton)
+
+
